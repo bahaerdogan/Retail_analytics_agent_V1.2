@@ -228,3 +228,18 @@
 {"node": "repair", "attempt": 1, "ts": "2025-09-21T18:13:48.873343Z"}
 {"node": "executor", "rows": 0, "error": null, "ts": "2025-09-21T18:13:48.917374Z"}
 {"node": "synthesizer", "final_type": "dict", "ts": "2025-09-21T18:13:48.917903Z"}
+{"node": "router", "route": "rag", "ts": "2025-09-21T18:25:05.563628Z"}
+{"node": "retriever", "retrieved_ids": ["product_policy::chunk0", "catalog::chunk1", "marketing_calendar::chunk2", "kpi_definitions::chunk2", "marketing_calendar::chunk1", "catalog::chunk0", "kpi_definitions::chunk0"], "ts": "2025-09-21T18:25:06.901681Z"}
+{"node": "planner", "constraints": {"category": "Beverages"}, "ts": "2025-09-21T18:25:06.902086Z"}
+{"node": "nl2sql", "has_sql": false, "ts": "2025-09-21T18:25:06.902266Z"}
+{"node": "executor", "rows": 0, "error": null, "ts": "2025-09-21T18:25:06.902409Z"}
+{"node": "repair", "attempt": 0, "skipped": true, "ts": "2025-09-21T18:25:06.902545Z"}
+{"node": "synthesizer", "final_type": "int", "ts": "2025-09-21T18:25:06.902796Z"}
+{"node": "router", "route": "hybrid", "ts": "2025-09-21T18:25:06.903336Z"}
+{"node": "retriever", "retrieved_ids": ["catalog::chunk1", "marketing_calendar::chunk1", "marketing_calendar::chunk0", "kpi_definitions::chunk1", "product_policy::chunk1", "kpi_definitions::chunk2"], "ts": "2025-09-21T18:25:06.903609Z"}
+{"node": "planner", "constraints": {"date_range": ["1997-06-01", "1997-06-30"], "category": "Beverages"}, "ts": "2025-09-21T18:25:06.903751Z"}
+{"node": "nl2sql", "has_sql": true, "ts": "2025-09-21T18:25:06.905377Z"}
+{"node": "executor", "rows": 0, "error": null, "ts": "2025-09-21T18:25:06.995706Z"}
+{"node": "repair", "attempt": 1, "ts": "2025-09-21T18:25:06.996707Z"}
+{"node": "executor", "rows": 0, "error": null, "ts": "2025-09-21T18:25:07.041605Z"}
+{"node": "synthesizer", "final_type": "dict", "ts": "2025-09-21T18:25:07.042207Z"}
