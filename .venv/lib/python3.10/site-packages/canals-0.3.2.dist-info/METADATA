@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: canals
+Version: 0.3.2
+Summary: A component orchestration engine for Haystack
+Project-URL: Documentation, https://github.com/deepset-ai/canals#readme
+Project-URL: Issues, https://github.com/deepset-ai/canals/issues
+Project-URL: Source, https://github.com/deepset-ai/canals
+Author-email: ZanSara <sara.zanzottera@deepset.ai>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: Freely Distributable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: networkx
+Provides-Extra: dev
+Requires-Dist: black[jupyter]==22.6.0; extra == 'dev'
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pylint==2.15.10; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: requests; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material; extra == 'docs'
+Requires-Dist: mkdocs-mermaid2-plugin; extra == 'docs'
+Requires-Dist: mkdocstrings[python]; extra == 'docs'
+Provides-Extra: graphviz
+Requires-Dist: pygraphviz; extra == 'graphviz'
+Provides-Extra: mermaid
+Requires-Dist: requests; extra == 'mermaid'
+Description-Content-Type: text/markdown
+
+# Canals
+
+<p align="center" float="left">
+  <img alt="" src="https://raw.githubusercontent.com/deepset-ai/canals/main/images/canals-logo-light.png#gh-dark-mode-only"/>
+  <img alt="" src="https://raw.githubusercontent.com/deepset-ai/canals/main/images/canals-logo-dark.png#gh-light-mode-only"/>
+</p>
+
+[![PyPI - Version](https://img.shields.io/pypi/v/canals.svg)](https://pypi.org/project/canals)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/canals.svg)](https://pypi.org/project/canals)
+<a href="https://github.com/deepset-ai/canals/actions/workflows/tests.yml">
+    <img alt="Tests" src="https://github.com/deepset-ai/canals/workflows/Tests/badge.svg?branch=main">
+</a>
+[![Coverage Status](https://coveralls.io/repos/github/deepset-ai/canals/badge.svg?branch=main)](https://coveralls.io/github/deepset-ai/canals?branch=main)
+<a href="https://deepset-ai.github.io/canals/">
+    <img alt="Documentation" src="https://img.shields.io/website?label=documentation&up_message=online&url=https%3A%2F%2Fdeepset-ai.github.io/canals/">
+</a>
+<a href="https://github.com/deepset-ai/canals/commits/main">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/deepset-ai/canals">
+</a>
+<a href="https://pepy.tech/project/canals">
+    <img alt="Monthly Downloads" src="https://pepy.tech/badge/canals/month">
+</a>
+<a href="https://github.com/deepset-ai/canals">
+    <img alt="Stars" src="https://shields.io/github/stars/deepset-ai/canals?style=social">
+</a>
+<a href="https://ossinsight.io/analyze/deepset-ai/canals">
+    <img alt="Stats" src="https://img.shields.io/badge/Stats-updated-blue">
+</a>
+
+Canals is a **component orchestration engine**. Components are Python objects that can execute a task, like reading a file, performing calculations, or making API calls. Canals connects these objects together: it builds a graph of components and takes care of managing their execution order, making sure that each object receives the input it expects from the other components of the pipeline.
+
+Canals powers version 2.0 of the [Haystack framework](https://github.com/deepset-ai/haystack).
+
+## Installation
+
+Running:
+
+```console
+pip install canals
+```
+
+gives you the bare minimum necessary to run Canals.
+
+To be able to draw pipelines, please make sure you have either an internet connection (to reach the Mermaid graph renderer at `https://mermaid.ink`) or [graphviz](https://graphviz.org/download/) (version 2.49.0) installed and then install Canals as:
+
+### Mermaid
+```console
+pip install canals[mermaid]
+```
+
+### GraphViz
+```console
+sudo apt install graphviz  # You may need `graphviz-dev` too
+pip install canals[graphviz]
+```

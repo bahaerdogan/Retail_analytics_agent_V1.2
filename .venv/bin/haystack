@@ -1,0 +1,9 @@
+#!/bin/sh
+'''exec' "/Users/baha/MyWork/Retail analytics agent/Retail_analytics_agent_(V1.2)/Retail_analytics_agent_V1.2/.venv/bin/python3" "$0" "$@"
+' '''
+import sys
+from haystack.cli.entry_point import main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())
