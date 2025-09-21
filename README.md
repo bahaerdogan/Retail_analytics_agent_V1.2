@@ -1,6 +1,6 @@
 Agentic Retail Analyst (Haystack + LangGraph)
 
-A production-ready local agent for retail analytics over the Northwind SQLite database and associated documentation corpus. The system integrates TF-IDF document retrieval, template-based NL→SQL generation with repair mechanisms, and typed output synthesis with citations. It is fully orchestrated using a 7-node LangGraph pipeline, operating entirely offline with no external API calls.
+Disclaimer: This project is a conceptual prototype. It is not part of my academic or professional work. This is a initial version updates will follow.
 
 Architecture
 
